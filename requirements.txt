@@ -1,2 +1,2 @@
-python-telegram-bot==<version>
-requests==<version>
+python-telegram-bot==20.3
+requests==2.31.0

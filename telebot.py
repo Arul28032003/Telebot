@@ -11,8 +11,8 @@ async def cal_func(update: Update, context: ContextTypes.DEFAULT_TYPE):
 # Define a message handler function to respond to all messages
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     message_text = update.message.text.lower()
-    if message_text == "hi":
-        await update.message.reply_text("Hi how can i ")
+    if message_text == "hey":
+        await update.message.reply_text("Sollri punda !!!")
     else:
         response_text = f"Sorry !! I don't know what are you saying : '{message_text}'"
         await update.message.reply_text(response_text)
@@ -21,7 +21,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
 app = ApplicationBuilder().token("6794321765:AAFVR5U-APosc7g2OQkjsiJ04GbcqxroXg0").build()
 
 # Add the command handler to the dispatcher
-app.add_handler(CommandHandler("hi", cal_func))
+app.add_handler(CommandHandler("Hey", cal_func))
 
 # Add the message handler to the dispatcher to handle all text messages
 app.add_handler(MessageHandler(filters.TEXT & (~filters.COMMAND), handle_message))
